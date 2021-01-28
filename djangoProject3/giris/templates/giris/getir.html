@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome!</h1>
+    <p>
+        {% if pcler %}
+            {% for a in pcler %}
+                {{ a.marka }}
+                {{ a.model }}
+                {{ a.fiyat }}
+                {{ a.tel }}
+                {{ a.adres }}
+                <p></p>
+            {% endfor %}
+        {% else %}
+            <table><p>
+                No Computer</p>
+            </table>
+        {% endif %}
+
+    </form>
+    </p>
+{% endblock content %}
+
+{% block alt %}
+  <footer id="footer">Copyright &copy; 2020 abdullah</footer>
+{% endblock alt %}
